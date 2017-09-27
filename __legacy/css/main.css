@@ -1,0 +1,283 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
+/* ************************************************
+CSS Default
+Author: Gianluca Buoncompagni
+************************************************* */
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i, a,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {line-height:1.4;}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { display:block;}
+ul{list-style:none;}
+del { text-decoration: line-through;}
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+table { border-collapse:collapse; border-spacing:0; font-size:inherit;}
+hr {display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
+
+
+/* typography
+====================================================== */
+body, select, input, textarea { color:#444; }
+ol {list-style-type: decimal; }
+small { font-size:85%; }
+strong, th { font-weight: bold; }
+td, td img { vertical-align:top; } 
+sup, sub { vertical-align: baseline; position: relative;  top: -0.4em;}
+sub { vertical-align: baseline; position: relative; top: 0.4em; }
+
+
+/* helpers 
+====================================================== */
+.clearfix:after {
+   visibility: hidden;
+   display: block;
+   font-size: 0;
+   content: " ";
+   clear: both;
+   height: 0;
+   }
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+.left       {float:left; display:inline;}
+.right       {float:right; display:inline;}
+.clear       {clear:both;}
+.alt         {position: absolute; top: -5000px; text-indent: -5000px;}
+.hidden      {display:none; visibility:hidden;} 
+.active, 
+.active a   {cursor: default;}
+
+/* No text-shadow: twitter.com/miketaylr/status/12228805301 */
+::-moz-selection{ background: #48443c; color:#fff; text-shadow: none; }
+::selection { background:#48443c; color:#fff; text-shadow: none; } 
+/* always force a scrollbar in non-IE */
+html { overflow-y: scroll; }
+/* bicubic resizing : 
+   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+.ie7 img { -ms-interpolation-mode: bicubic; }
+
+
+/* struttura 
+====================================================== */
+html, body
+{	font-family:'Glegoo', serif;
+	font-size:15px;
+	line-height:1.8;
+   font-weight: 400; 
+	color: #444;
+	height: 100%;	
+	}
+html{
+   background: #fff url('../img/bg.png') no-repeat;
+   -o-background-size: 100% auto;
+   -webkit-background-size: 100% auto;
+   -moz-background-size: 100% auto; 
+   background-size: 100% auto;  
+}
+body{	  
+	color: #606d77;
+}
+#mainWrap{
+   position: relative;
+   padding: 5% 10% 5%;
+   overflow: visible;
+}
+strong{
+   font-weight: 600;
+}
+img{
+   position: absolute;
+   top:0;
+   right:0;
+   width: auto;
+   height: 100%;
+}
+hgroup{
+	margin-bottom: 20px;
+}
+h1{	
+   font-size: 16px; 
+	color: #FF4040;
+	margin-bottom: 5px;
+	font-weight: normal;
+	}
+h2{	
+   font-family: 'Oswald', sans-serif;
+   display: inline-block;
+   color: #444;
+	font-size: 26px; 
+	margin-bottom: 5px;
+	font-weight: normal;
+	text-transform: uppercase;
+
+	}
+/* ie 7 filter */
+* + html h2{
+   display: inline;
+   zoom:1;
+ }
+h3{
+	color: #FF4040;
+	margin-bottom: 2px;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: normal;
+}	
+a{	
+	color: #48443c;
+	text-decoration: none;
+	padding: 0px 4px;
+	background-color: #f2f2f2;
+	border:1px solid #ddd;
+	font-weight: 600;
+	white-space: nowrap;
+	text-shadow:none;
+	border-radius:3px;
+	-webkit-transition: all 300ms ease;
+}
+a:hover{
+	color: #000;
+	background-color: #ABD7FF;
+}
+p{
+   margin-bottom: 10px;
+   text-shadow: 1px 1px 1px #fff;
+}
+li{
+	margin-bottom: 15px;
+	line-height: 1.5;
+}
+li a{
+   
+}
+span.fb{
+	color: #3B5998;
+	
+}
+section{
+	width: 44%;	
+	margin-bottom: 10px;
+	float: left;	
+}
+section#shortDesc{  
+}
+
+section#work{  
+position: absolute;
+left:50%;
+}
+section#cv,
+section#specialties, 
+section#contacts{  
+	clear: both;
+}
+/* iPads (landscape) ----------- */
+@media only screen and (min-width : 481px)and (max-width : 768px){
+   #mainWrap {
+   padding: 2% 10% 0;
+   }
+   section {
+      width: 50%;
+   }
+   section#work {
+   left: 60%;
+   width: 40%;
+   }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (max-width : 480px) {
+   body{
+      font-size: 16px;
+      line-height: 1.5;
+   }
+   h1{	
+	font-size: 20px; 
+	}
+   h3{
+	font-size: 18px;
+   }	
+   section{
+	width: auto;	
+	float: none;	
+   }
+   section#work{  
+   position: static;
+   left:0;
+   }
+   li{
+      font-size: 13px;
+      line-height: 1.2;
+      margin-bottom: 5px;
+      padding: 12px 6px;
+      background-color: #f2f2f2;
+      border: 1px solid #ddd;
+      position: relative;
+   }
+   li a{
+      position: absolute;
+      top:0;
+      right:0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      font-size: 16px;
+      padding: 6px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+   }
+   a{	
+	color: #48443c;
+	text-decoration: none;
+	padding: 0;
+	background: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	text-shadow:none;
+	text-decoration: underline;
+   }
+}
+
+
+
+
+
+
+
+
+
+

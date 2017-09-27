@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "name": "Gian Luca Buoncompagni",
+  "launch_path": "/index.html",
+  "description": "Senior Front End Developer",
+  "icons": {
+    "128": "/images/res/mipmap-xxhdpi/ic_launcher.png"
+  },
+  "developer": {
+    "name": "",
+    "url": ""
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "en",
+  "permissions": {
+  }
+}
