@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Gian Luca Buoncompagni</title>
+   <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:300, 400,400i,500,700" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:400,400i,500,700" rel="stylesheet">
+
+   <style>
+      @page {
+         size: auto;
+         margin: 10mm 15mm 0mm 0mm;
+         height: 100%;
+         position: relative;
+         @bottom-left {
+            margin: 10pt 0 30pt 0;
+            border-top: .25pt solid #666;
+            content: "My book";
+            font-size: 9pt;
+            color: #333;
+         }
+      }
+      
+      * {
+         position: relative;
+         box-sizing: border-box;
+      }
+      html,
+      body {
+         margin: 0;
+         padding: 0;
+         height: 100%;
+         font-family: 'Barlow Semi Condensed', sans-serif;
+         font-size: 18px;
+         color: darkslategray;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4 {
+         font-family: 'Barlow Condensed', sans-serif;
+         margin: 0;
+         letter-spacing:0.04em;
+      }
+      strong{font-weight: 500;}
+      a {
+         color: inherit;
+         text-decoration: none;
+      }
+
+      h1 {
+         font-weight: 500;
+         text-transform: uppercase;
+         line-height: 1;
+         margin-bottom: .4em;
+      }
+
+      h2 {
+         font-weight: 400;
+         font-size: 1.4em;
+         margin-bottom: .5em;
+         color: lightslategray;
+      }
+
+      h3 {
+         text-transform: uppercase;
+         font-size: 1.4em;
+         margin-bottom: .25em;
+         font-weight: 500;
+      }
+
+      p {
+         margin: 0 0 .6em;
+      }
+      section{margin-bottom: 1.3em;}
+      ul{list-style-type: none; margin: 0 0 1em; padding: 0;}
+      ul > li {
+         line-height: 1.15;
+         margin-bottom: .4em;
+      }
+      .page {
+         margin: 0;
+         padding: 0;
+      }
+
+      .footer{
+         display: block;
+         position: absolute;
+         width: 100%;
+         bottom: 0;
+         left: 0;
+         text-align: right;
+         font-style: italic;
+         opacity: .5;
+         font-size: .7em;
+      }
+
+      .content {
+         display: flex;
+         justify-content: space-between;
+         vertical-align: top;
+      }
+
+      aside {
+         width: 26vw;
+         text-align: right;
+         font-weight: 300;
+         font-size: .9em;
+      }
+
+      .main {
+         width: 68vw;
+         font-size: .9em;
+      }
+
+      .recap {
+         list-style-type: none;
+      }
+      .recap li{margin-bottom: .6em;}
+      .recap strong {
+         display: block;
+      }
+
+      .pic {
+         width: 6em;
+         height: 6em;
+         background: #efefef;
+         border-radius: 50%;
+         margin: 0 -1em 2em auto;
+         overflow: hidden;
+         background: url('data:image/jpeg;base64,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');
+         background-size: cover;
+         opacity: .8;
+      }
+
+      @media print {
+         html, body {font-size: 15px;}
+         .page {
+            page-break-after: always;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 28.2cm;
+         }
+         .footer{display: block;}
+      }
+      @media screen {
+         a{text-decoration: underline;}
+         .pages{margin: 0 auto; padding:2em 1em; max-width: 1020px;}
+         .page{position: relative;}
+         .main{margin-left: 250px;}
+         aside{display: none; position: fixed; top:2.35em; bottom:0; width: auto; }
+         aside.first-page{display: block; z-index: 2; overflow: auto; padding-right: 1.5em;}
+         .footer{display: none;}
+      }
+      @media screen and (max-width:45em){
+         .pages{padding:2em .5em; }
+         .content{display: block;}
+         aside.first-page{position: relative; text-align: left; }
+         .main{margin-left: 0px; width: auto;}
+         .recap{display: flex; flex-wrap:wrap;}
+         .recap li{min-width: 7em;}
+         .pic{position: absolute; top:-1em; right:1em; width: 5em; height:5em;}
+      }
+      
+   </style>
+</head>
+
+<body>
+   <div class="pages">
+      <div class="page">
+         <div class="content">
+            <aside class="first-page">
+               <h1>Gian Luca<br>Buoncompagni</h1>
+               <h2>Curriculum Vitae</h2>
+
+               <div class="pic"></div>
+               <ul class="recap">
+                  <li>
+                     <strong>Data di nascita</strong>27/06/1976</li>
+                  <li>
+                     <strong>Luogo di nascita</strong>Lodi (LO)</li>
+                  <li>
+                     <strong>Cittadinanza</strong>Italiana</li>
+                  <li>
+                     <strong>Residenza</strong>Via Sansovino, 14<br>20133 - Milano</li>
+                  <li>
+                     <strong>Stato civile</strong>Coniugato</li>
+                  <li>
+                     <strong>Obblighi militari</strong>Assolti</li>
+                  <li>
+                     <strong>Telefono</strong>+39 339 7794186</li>
+                  <li>
+                     <strong>E-mail</strong>gbuonc@gmail.com</li>
+                  <li>
+                     <strong>Web</strong>
+                     <small>
+                        <a href="http://www.gianlucabuoncompagni.net" target="_blank">www.gianlucabuoncompagni.net</a>
+                        <br>
+                        <a href="http://linkedin.com/in/gbuoncompagni" target="_blank">linkedin.com/in/gbuoncompagni</a>
+                        <br>
+                        <a href="http://github.com/gbuonc" target="_blank">github.com/gbuonc</a>
+                     </small>
+                  </li>
+               </ul>
+            </aside>
+            <div class="main">
+               <section>
+                  <h3>Profilo</h3>
+                  <p>Sviluppatore front end con più di 10 anni di esperienza nello sviluppo di siti e web app ad alto traffico, responsive e conformi agli standard più recenti (html5 e css3, javascript ES6), con ampia conoscenza delle problematiche di sviluppo cross browser, di ottimizzazione delle performance e online advertising, dei principi di usabilità e accessibilità, di pratiche SEO e UX design. Conoscenza dei principali framework e librerie javascript (React, Angular, jQuery), versioning e build tool (Git, Webpack, Npm, Yarn, Gulp) e sviluppo su piattaforme per blog (Wordpress), CMS Enterprise (Liferay) e social network (Facebook SDK, Twitter API ecc).</p>
+               </section>
+               <section>
+                  <h3>Esperienze Professionali</h3>
+                  <h4>Attuale occupazione</h4>
+                  <p>Senior front end developer presso Editoriale Il Fatto Spa:</p>
+                  <ul>
+                     <li>- implementazione, sviluppo, ottimizzazione, testing e manutenzione del sito <a href="https://www.ilfattoquotidiano.it" target="_blank">www.ilfattoquotidiano.it</a> (con
+                        una media di 500.000 utenti unici e 1,6 milioni di page views al giorno), progetti editoriali speciali
+                        e portale e-commerce (shop.ilfattoquotidiano.it), su piattaforma web e mobile.</li>
+                     <li>- integrazione e implementazione lato client di ADV networks e delivery systems (Google DFP, Outbrain,
+                        Criteo ecc.), social sharing e in generale script e api di terze parti.</li>
+                     <li>- realizzazione e sviluppo di progetti e attività di digital marketing (es. banner, newsletter, branded
+                        content, user generated content ecc) - studi di fattibilità e attività di ricerca e sviluppo di soluzioni
+                        innovative (es. progressive web app)</li>
+                  </ul>
+
+                  <h4>Gennaio 2009 - Maggio 2014</h4>
+                  <p>Senior front end developer presso Zodiak Active Srl di Milano.</p>
+
+                  <h4>Gennaio 2004 - Dicembre 2008</h4>
+                  <p>Collaborazione presso Fullsix SpA di Milano come Multimedia Specialist e Sviluppatore front end.<br>
+                  Attività di libero professionista.</p>
+
+                  <h4>Settembre 2001 - Gennaio 2004</h4>
+                  <p>Web designer presso Alchera Interactive SpA di Milano.</p>
+
+                  <h4>Luglio - Agosto 2001</h4>
+                  <p>Collaborazione con il Comune di Lodi come sviluppatore web e realizzazione siti internet come freelance.</p>
+
+                  <h4>Aprile - Agosto 2000</h4>
+                  <p>Stage di formazione presso Obweb srl di Milano in qualità di web designer e junior account.</p>
+
+                  <h4>Gennaio 1998 - Dicembre 1999</h4>
+                  <p>Collaborazione presso la biblioteca dell'università IULM di Milano come assistente dell'ufficio acquisti
+                     e catalogazione.</p>
+               </section>
+               <section>
+                  <h3>Studi</h3>
+                  <h4>Marzo 2000</h4>
+                  <p>Laurea in Relazioni Pubbliche conseguita presso la Libera Università di Lingue e Comunicazione IULM di Milano con una tesi in Economia dell’informazione dal titolo "Il mercato discografico e le nuove tecnologie: pirateria e copia privata".</p>
+                  <p>Relatore prof. Carlo Antonio Ricciardi.<br>Voto di laurea: 110/110 e lode.</p>
+
+                  <h4>Giugno 1995</h4>
+                  <p>Maturità Scientifica conseguita presso il liceo statale "Giovanni Gandini" di Lodi.
+                     <br> Voto di diploma: 56/60.</p>
+               </section>
+            </div>
+         </div>
+         <div class="footer">
+            <p>Gian Luca Buoncompagni - Curriculum Vitae - Pagina 1/2</p>
+         </div>
+      </div>
+      <div class="page">
+         <div class="content">
+            <aside>
+               <h1>Gian Luca<br>Buoncompagni</h1>
+               <h2>
+                  <small>Curriculum Vitae</small>
+               </h2>
+            </aside>
+            <div class="main">
+               
+               <section>
+                  <h3>Corsi e Specializzazioni</h3>
+                  <h4>Marzo 2002</h4>
+                  <p>Corso post laurea in Web Project Management presso Genesio - Istituto Nuove Tecnologie, Milano.</p>
+               </section>
+               <section>
+                  <h3>Lingue Straniere</h3>
+                  <h4>Inglese</h4>
+                  <p>Ottima comprensione orale e scritta, buona capacità espressiva scritta e parlata.</p>
+                  <h4>Tedesco</h4>
+                  <p>Comprensione e capacità espressiva a livello scolastico, sia in forma scritta che parlata.</p>
+               </section>
+               <section>
+                  <h3>Competenze informatiche</h3>
+                  <p>
+                        Piattaforme: Mac, Pc<br>
+                        Sistemi operativi: Mac OsX, MS Windows<br>
+                        Sviluppo: Html, css, javascript(ES6), node.js, php, xml, git<br>
+                        Grafica: Adobe Photoshop, Illustrator, InDesign, Acrobat<br>
+                        Database: MySql, Firebase
+                  </p>
+               </section>
+               <section>
+                  <h3>Portfolio</h3>
+                  <p>Alcuni tra i lavori più rappresentativi:</p>
+                  <ul>
+                     <li>- <a href="https://www.ilfattoquotidiano.it" target="_blank">www.ilfattoquotidiano.it</a> (realizzazione completa dell’attuale versione del quotidiano online e di tutti i relativi
+                        prodotti editoriali e di marketing, su piattaforma Wordpress)</li>
+                     <li>- <a href="http://calendar2014.lavazza.com/" target="_blank">Calendario Lavazza 2014</a> (versione mobile & tablet)</li>
+                     <li>- App-etizer Olivia e Marino (app ibrida per Android e iOs)</li>
+                     <li>- <a href="http://www.kinder.com" target="_blank">www.kinder.com</a> (network internazionale su piattaforma enterprise Liferay)</li>
+                     <li>- <a href="http://f138.ferrari.com" target="_blank"></a>f138.ferrari.com (web, tablet, mobile)</li>
+                  </ul>
+                  <p>Ho inoltre collaborato a progetti per clienti nazionali e internazionali come Nutella, Banca Mediolanum, Bosch, Condé Nast, Lottomatica, Masterfoods, Reckitt Benckiser, ecc.</p>
+               </section>
+               <section>
+                  <h3>Riconoscimenti</h3>
+                  <ul>
+                     <li>- Premio Web Rockit 2002 per www.jntplus.com (ora offline)</li>
+                     <li>- Premio Mediastars 2005 (cat. e-commerce) per <a href="http://www.unopiu.it" target="_blank">www.unopiu.it</a></li>
+                  </ul>
+               </section>
+               <section>
+                  <h3>Obblighi Militari</h3>
+                  <p>Assolti con Servizio Civile svolto presso la Fondazione Don Carlo Gnocchi di Milano da Settembre 2000 a Luglio
+                     2001.</p>
+               </section>
+               <section>
+                  <h3>Interessi e Attività extra lavorative</h3>
+                  <ul>
+                     <li>- Musica (musicista amatoriale - <a href="http://www.letlovin.com" target="_blank">www.letlovin.com</a>)</li>
+                     <li>- Sport fluviali (campione italiano di canoa canadese nel 1992) </li>
+                     <li>- Donatore di sangue AVIS dal 1994</li>
+                  </ul>
+               </section>
+               <small class="privacy">
+                  Il sottoscritto dichiara di essere a conoscenza dei diritti riconosciuti dal Dlgs n.196/2003 e consente il trattamento dei
+                  dati personali per le sole attività di ricerca e selezione del personale.
+               </small>
+            </div>
+         </div>
+         <div class="footer">
+            <p>Gian Luca Buoncompagni - Curriculum Vitae - Pagina 2/2</p>
+         </div>
+      </div>
+   </div>
+</body>
+
+</html>
