@@ -1,0 +1,117 @@
+* {
+  position: relative;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  color: #454545;
+  font-size: 0.86em;
+  line-height: 1.6;
+  background: #fff;
+  transition: all 400ms ease-in-out;
+}
+
+.main-wrap {
+  margin: 1em;
+  /* avoid overflow for a links before and after */
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+  font-weight: 500;
+  color: #222;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin: 0 0 .5em;
+}
+
+h2,
+h3 {
+  background: khaki;
+  display: inline-block;
+  padding: .2em;
+  padding-right: 1.5em;
+}
+
+p {
+  margin: 0 0 1em
+}
+
+li {
+  margin-bottom: 0.6em;
+}
+
+.section {
+  margin-bottom: 2em;
+}
+
+.shortDesc {
+  font-size: 1.1em;
+  border-bottom: 1px dashed #444;
+  padding-bottom: 1em;
+}
+
+a {
+  font-weight: bold;
+  color: #222;
+  text-transform: uppercase;
+  overflow: hidden;
+  text-decoration: none;
+  transition: all 300ms ease-in-out;
+  border-bottom: 2px dotted currentColor;
+  white-space: nowrap;
+}
+a:before,
+a:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -5px;
+  width: 100%;
+  height: 100%;
+  padding: 2px 5px;
+  background-color: #000;
+  opacity: 0;
+  z-index: -1;
+  transition: all 200ms ease-in-out;
+}
+a:after {
+  transform: translateX(100%);
+}
+a:before {
+  transform: translateX(-100%);
+}
+a:hover {
+  color: #fff;
+  border: none;
+}
+a:hover:before,
+a:hover:after {
+  opacity: 1;
+  transform: translateX(0);
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (min-width: 60em) {
+  .main-wrap {
+     margin: 2em;
+     max-width: 56em;
+     margin: 0 auto;
+     padding: 1em;
+  }
+  .works {
+     display: flex;
+     justify-content: space-between;
+  }
+
+  .work-wrapper {
+     max-width: 48%;
+  }
+}
