@@ -1,196 +1,228 @@
 <!doctype html>
 <html lang=eng>
-   <head>
-      <meta charset=utf-8>
-      <meta http-equiv=X-UA-Compatible content="IE=edge">
-      <meta name=description content="">
-      <meta name=viewport content="width=device-width,initial-scale=1">
-      <title>Senior Front End Developer - Gian Luca Buoncompagni</title>
-      <meta name=msapplication-tap-highlight content=no>
-      <link rel=manifest href=manifest.json>
-      <meta name=mobile-web-app-capable content=yes>
-      <meta name=application-name content="Senior Front End Developer - Gian Luca Buoncompagni">
-      <link rel=icon sizes=192x192 href=images/touch/android-icon-192x192.png>
-      <meta name=apple-mobile-web-app-capable content=yes>
-      <meta name=apple-mobile-web-app-status-bar-style content=black>
-      <meta name=apple-mobile-web-app-title content="Senior Front End Developer - Gian Luca Buoncompagni">
-      <link rel=apple-touch-icon href=images/touch/apple-icon.png>
-      <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,700|Rubik:700" rel=stylesheet>
-      <meta name=msapplication-TileImage content=images/touch/ms-icon-144x144-precomposed.png>
-      <meta name=msapplication-TileColor content=#000000>
-      <meta name=theme-color content=#000000>
-      <style>
-         * {
-            position: relative;
-            box-sizing: border-box;
+<head>
+   <meta charset=utf-8>
+   <meta http-equiv=X-UA-Compatible content="IE=edge">
+   <meta name=description content="">
+   <meta name=viewport content="width=device-width,initial-scale=1">
+   <title>Senior Front End Specialist and Developer - Gian Luca Buoncompagni</title>
+   <meta name=msapplication-tap-highlight content=no>
+   <link rel=manifest href=manifest.json>
+   <meta name=mobile-web-app-capable content=yes>
+   <meta name=application-name content="Senior Front End Specialist and Developer - Gian Luca Buoncompagni">
+   <link rel=icon sizes=192x192 href=images/touch/android-icon-192x192.png>
+   <meta name=apple-mobile-web-app-capable content=yes>
+   <meta name=apple-mobile-web-app-status-bar-style content=black>
+   <meta name=apple-mobile-web-app-title content="Senior Front End Developer - Gian Luca Buoncompagni">
+   <link rel=apple-touch-icon href=images/touch/apple-icon.png>
+   <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,700|Fira+Sans+Extra+Condensed:500" rel=stylesheet>
+   <meta name=msapplication-TileImage content=images/touch/ms-icon-144x144-precomposed.png>
+   <meta name=msapplication-TileColor content=#000000>
+   <meta name=theme-color content=#000000>
+   <style>
+      * {
+         position: relative;
+         box-sizing: border-box;
+      }
+      body {
+         font-family: 'Roboto Mono', monospace;
+         color: #454545;
+         font-size: 0.86em;
+         line-height: 1.6;
+         background: #fff;
+         transition: all 400ms ease-in-out;
+      }
+      .main-wrap{
+         margin: 1em;
+      }
+      h1,
+      h2,
+      h3 {
+         font-family: 'Fira Sans Extra Condensed', sans-serif;
+         font-weight: 500;
+         color: #222;
+         line-height: 1.1;
+         text-transform: uppercase;
+         margin: 0 0 .5em;
+      }
+      h2, h3{
+         background: khaki;
+         display: inline-block;
+         padding: .2em;
+         padding-right: 1.5em;
+      }
+      p{ margin: 0 0 1em}
+
+      li {
+         margin-bottom: 0.6em;
+      }
+
+      section {
+         margin-bottom: 2em;
+      }
+
+      .shortDesc {
+         border-bottom: 1px dashed #444;
+         padding-bottom: 1em;
+      }
+
+      a {
+         font-weight: bold;
+         color: #222;
+         text-transform: uppercase;
+         overflow: hidden;
+         text-decoration: none;
+         transition: all 300ms ease-in-out;
+         border-bottom: 2px dotted currentColor;
+         white-space: nowrap;
+      }
+
+      a:before,
+      a:after {
+         content: '';
+         position: absolute;
+         top: -2px;
+         left: -5px;
+         width: 100%;
+         height: 100%;
+         padding: 2px 5px;
+         background-color: #000;
+         opacity: 0;
+         z-index: -1;
+         transition: all 200ms ease-in-out;
+      }
+
+      a:after {
+         transform: translateX(100%);
+      }
+
+      a:before {
+         transform: translateX(-100%);
+      }
+
+      a:hover {
+         color: #fff;
+         border:none;
+      }
+
+      a:hover:before,
+      a:hover:after {
+         opacity: 1;
+         transform: translateX(0);
+      }
+
+      ul {
+         list-style-type: none;
+         margin: 0;
+         padding: 0;
+      }
+
+      .highlight {
+         background-image: linear-gradient(to right, #dede00 50%, gold 50%);
+         background-position: 0;
+         background-size: 200%;
+         transition: all 0.4s;
+      }
+
+      .highlight:hover {
+         background-position: -100%;
+      }
+
+      @media screen and (min-width: 60em) {
+         .main-wrap {
+            margin: 2em;
+            max-width: 56em;
+            margin: 0 auto;
+            padding: 1em;
          }
-         body {
-            font-family: 'Roboto Mono', monospace;
-            color: #454545;
-            font-size: 0.86em;
-            line-height: 1.6;
-            background: #fff;
-            transition: all 400ms ease-in-out;
-         }
-         h1,
-         h2,
-         h3 {
-            font-family: 'Rubik', sans-serif;
-            color: #222;
-            line-height: 1.1;
-         }
-         li {
-            margin-bottom: 0.6em;
-         }
-         section {
-            margin-bottom: 2em;
-         }
-         .shortDesc {
-            font-size: 1.1em;
-            margin: 3em 0 2em;
-            border-bottom: 1px dashed #444;
-            padding-bottom: 1em;
-         }
-         a {
-            font-weight: bold;
-            color: #222;
-            text-transform: uppercase;
-            overflow: hidden;
-            text-decoration: none;
-            transition: all 300ms ease-in-out;
-         }
-         a:before,
-         a:after {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -5px;
-            width: 100%;
-            height: 100%;
-            padding: 2px 5px;
-            background-color: #000;
-            opacity: 0;
-            z-index: -1;
-            transition: all 200ms ease-in-out;
-         }
-         a:after {
-            transform: translateX(100%);
-         }
-         a:before {
-            transform: translateX(-100%);
-         }
-         a:hover {
-            color: #fff;
-         }
-         a:hover:before,
-         a:hover:after {
-            opacity: 1;
-            transform: translateX(0);
-         }
-         ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-         }
-         .highlight{
-            background-image: linear-gradient(to right, #dede00 50%, gold 50%);
-            background-position: 0;
-            background-size: 200%;
-            transition: all 0.4s;
-         }
-         .highlight:hover{
-            background-position: -100%;
+         .works {
+            display: flex;
+            justify-content: space-between;
          }
 
-         @media screen and (min-width: 40em) {
-            .main-wrap {
-               max-width: 60em;
-               margin: 0 auto;
-               padding: 1em;
-            }
-            .works {
-               display: flex;
-               justify-content: space-between;
-            }
-            .work-wrapper {
-               max-width: 48%;
-            }
+         .work-wrapper {
+            max-width: 48%;
          }
-      </style>
-   </head>
+      }
+   </style>
+</head>
 
-   <body>
-      <div class=main-wrap>
-         <header>
-            <h1>Gian Luca Buoncompagni</h1>
-            <h2>Senior Front End Developer</h2>
-         </header>
-         <section class=shortDesc>
-            <p>I'm a web front end developer with more than 12 years of experience, focused on fast and responsive web sites and
-               web apps for desktop and mobile devices.<br>I live and work in Milan, Italy.
-               <p>Currently I'm Head of front end at <a href=http://www.vivaticket.com>Vivaticket</a></section>
-         <section class=works>
-            <div class=work-wrapper>
-               <h3>[Selected Previous Works]</h3>
-               <ul>
-                  <li><a href=http://wwww.ilfattoquotidiano.it target=_blank>Il Fatto Quotidiano</a><br>Redesign and front end development
-                     of main website and special editorial projects for web and mobile. Performance improvement and manteinance.</ul>
-               <p><em>Projects developed for Zodiak Active:</em>
-                  <ul>
-                     <li><a href=http://calendar2014.lavazza.com/ target=_blank>Lavazza Calendar</a><br>Tablet &amp; Mobile versions,
-                        Windows Phone, Android & Ios
-                        <li><a href="https://itunes.apple.com/us/app/app-etizer/id640052804?mt=8" target=_blank>App-etizer Olivia e Marino</a><br>Hybrid
-                           webapp for Android & Ios
-                           <li><a href=http://f138.ferrari.com target=_blank>Ferrari F138 Singleseater</a><br>html, css, javascript
-                              (for web &amp; mobile)
-                              <li><a href=http://www.kinder.com/ target=_blank>Kinder</a><br>International network of local corporate
-                                 websites
-                  </ul>
-            </div>
-            <div class=work-wrapper>
-               <h3>[Personal Projects]</h3>
-               <ul>
-                  <li><a href=https://ifqpwa.surge.sh>Il Fatto PWA</a><br>Progressive mobile WebApp with offline capabilities for
-                     paper edition of Il Fatto Quotidiano. Proof of concept, not for production
-                     <li><a href=https://impicciato-ed4c3.firebaseapp.com/>Impicciato</a><br>Hangman-like mobile game, built with
-                        react.js
-                        <li><a href=http://ai-translator.surge.sh>Ai-translator</a><br>AI proof of concept, based on Google's Cloud
-                           Vision and Translate APIs
-                           <li><a href=http://studiopym.com>Studio Pym</a><br>Website for an editorial office in Milan, with custom
-                              CMS based on Wordpress
-                              <li><a href=http://gbuonc.github.io/picotumblr/>PicoTumblr</a><br>Mobile picture viewer as fast prototype
-                                 webapp (mobile only)</ul>
-            </div>
-         </section>
-         <section class=specialties>
-            <h3>[Skills]</h3>
-            <p>Hand-coded <strong>HTML5</strong> &amp; <strong>CSS3</strong>, <strong>javascript (ES6)</strong>. Extensive knowledge
-               of <strong>cross-browser</strong> development and <strong>performance</strong> issues on different platforms
-               and devices, <strong>mobile</strong> development, principles of <strong>usability</strong> and <strong>accessibility</strong>,
-               <strong>information architecture</strong>, <strong>SEO</strong> practices and <strong>code optimization</strong>.
-               Knowledge of <strong>server side</strong> languages and technologies (Php and MySql).</section>
-         <section class=cv>
-            <h3>[Resume]</h3>
-            <p>View my <a href="cv.html" target="_blank">italian resume</a> and <a href="download/cv_buoncompagni.pdf" target="_blank">download it</a> (an <a href=download/resume_buoncompagni.pdf>english version</a> is also available) or visit my <a href=http://www.linkedin.com/in/gbuoncompagni>profile page</a> on LinkedIn
-               or <a href=https://github.com/gbuonc>GitHub</a>.<br>Sorry, <span class=fb>no Facebook</span>.</section>
-         <section id=contacts>
-            <h3>[Contacts]</h3>
-            <p>gbuonc[at]gmail[dot]com</section>
-      </div>
-      <script>
-         (function (i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function () {
-               (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-               m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-         })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-         ga('create', 'UA-22731089-1', 'auto');
-         ga('send', 'pageview');
-      </script>
-   </body>
+<body>
+   <div class=main-wrap>
+      <header>
+         <h1>Gian Luca Buoncompagni</h1>
+         <h2>Front End Specialist</h2>
+      </header>
+      <section class=shortDesc>
+         <p>I'm a web front end specialist and senior developer with more than 15 years of experience, focused on fast and responsive web sites and applications for desktop and mobile devices.
+         As a team leader I managed and worked with remote and distributed international development teams.</p>
+         <p>Currently I'm Head of front end at <a href=http://www.vivaticket.com>Vivaticket</a> in Milan, Italy.</p>
+      </section>
+      <section class=works>
+         <div class=work-wrapper>
+            <h3>Selected Previous Works</h3>
+            <ul>
+               <li><a href=http://wwww.ilfattoquotidiano.it target=_blank>Il Fatto Quotidiano</a><br>Redesign and front
+                  end development
+                  of main website and special editorial projects for web and mobile. Performance improvement and
+                  manteinance.
+            </ul>
+            <p>Previous projects for different web agencies include, among others, many international clients such as <strong>LAVAZZA</strong> (tablet and mobile version of 2014 calend, hybrid app for Android and Ios), <strong>FERRARI</strong> (Launch website for Formula 1 F138 singleseater), <strong>KINDER</strong> (entire international network of local corporate websites).</p>
+         </div>
+         <div class=work-wrapper>
+            <h3>Personal Projects</h3>
+            <ul>
+               <li><a href=https://impicciato-ed4c3.firebaseapp.com>Impicciato</a><br>Hangman-like mobile game, built with react.js</li>
+               <li><a href=http://ai-translator.surge.sh>Ai-translator</a><br>AI proof of concept, based on Google's Cloud Vision and Translate APIs</li>
+               <li><a href=http://studiopym.com>Studio Pym</a><br>Website for an editorial office in Milan, with custom CMS based on Wordpress</li>
+               <li><a href=https://nanoscore.netlify.app>NanoScore</a><br>Interactive mobile music score editor based on abc music notation</li>
+               <!-- <li><a href=http://gbuonc.github.io/picotumblr />PicoTumblr</a><br>Mobile picture viewer as fast
+                  prototype webapp (mobile only)</li>
+               <li><a href=https://ifqpwa.surge.sh>Il Fatto PWA</a><br>Progressive mobile WebApp with offline
+                  capabilities for paper edition of Il Fatto Quotidiano. Proof of concept, not for production
+               </li> -->
+            </ul>
+         </div>
+      </section>
+      <section class=specialties>
+         <h3>Skills</h3>
+         <p><strong>HTML5</strong> &amp; <strong>CSS3</strong>, <strong>javascript (ES6)</strong> and major front end libraries (<strong>ReactJs</strong>, <strong>VueJs</strong>). Extensive knowledge
+            of <strong>cross-browser</strong> development and <strong>performance</strong> issues on different platforms
+            and devices, <strong>mobile</strong> development, principles of <strong>UX
+               design</strong>,<strong>usability</strong> and <strong>accessibility</strong>,
+            <strong>information architecture</strong>, <strong>SEO</strong> practices and <strong>code
+               optimization</strong>.
+            Knowledge of <strong>server side</strong> languages and technologies (Nodejs, Express, Php and MySql).
+            <h3>Technologies</h3>
+            <p><strong>ReactJs</strong>, <strong>VueJs</strong> and major front end libraries. <strong>Rest APIs</strong>, css processors (<strong>SASS</strong>, <strong>postCSS</strong>), task runners, package managers and module bundlers (<strong>npm</strong>, <strong>gulp</strong>, <strong>webpack</strong>, <strong>babel</strong>), code versioning (<strong>GIT</strong>, <strong>GITFlow</strong>), unit and integration tests (<strong>Jest</strong>, <strong>Cypress</strong>), agile methodology (<strong>SCRUM</strong>, <strong>Kanban</strong>), <strong>CI/CD</strong> on mocroservices architecture.
+      </section>
+      <section class=cv>
+         <h3>Resume</h3>
+         <p>View my <a href="cv.html" target="_blank">italian resume</a> and <a href="download/cv_buoncompagni.pdf"
+               target="_blank">download it</a> (an <a href=download/resume_buoncompagni.pdf>english version</a> is also
+            available) or visit my <a href=http://www.linkedin.com/in/gbuoncompagni>profile page</a> on LinkedIn
+            or <a href=https://github.com/gbuonc>GitHub</a>.<br>Sorry, <span class=fb>no Facebook</span>.
+      </section>
+      <section id=contacts>
+         <h3>Contacts</h3>
+         <p>gbuonc[at]gmail[dot]com</p>
+      </section>
+   </div>
+   <script>
+      (function (i, s, o, g, r, a, m) {
+         i['GoogleAnalyticsObject'] = r;
+         i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+         }, i[r].l = 1 * new Date();
+         a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+         a.async = 1;
+         a.src = g;
+         m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-22731089-1', 'auto');
+      ga('send', 'pageview');
+   </script>
+</body>
+
 </html>
