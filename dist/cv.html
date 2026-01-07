@@ -14,13 +14,6 @@
          margin: 10mm 15mm 0mm 0mm;
          height: 100%;
          position: relative;
-         @bottom-left {
-            margin: 10pt 0 30pt 0;
-            border-top: .25pt solid #666;
-            content: "My book";
-            font-size: 9pt;
-            color: #333;
-         }
       }
 
       * {
@@ -33,7 +26,7 @@
          padding: 0;
          height: 100%;
          font-family: 'Barlow Semi Condensed', sans-serif;
-         font-size: 18px;
+         font-size: 20px;
          color: darkslategray;
       }
 
@@ -136,9 +129,9 @@
       }
 
       @media print {
-         html, body {font-size: 15px;}
+         html, body {font-size: 16px;}
          .page {
-            page-break-after: always;
+            page-break-after:initial;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -211,7 +204,15 @@
                <section>
                   <h3>Esperienze Professionali</h3>
                   <h4>Attuale occupazione</h4>
-                  <p><strong>Head of front end presso Tailoor Srl</strong></p>
+                  <p><strong>Head of front end e Customer Integration presso Tailoor Srl</strong></p>
+                  <ul>
+                     <li>- Responsabile Front End, 3D e integrazioni per una piattaforma SaaS complessa e scalabile</li>
+                     <li>- Architettura di un ecosistema front-end per e-commerce SaaS multi-tenant</li>
+                     <li>- Realizzazione di configuratori 3D avanzati browser-based e mobile</li>
+                     <li>- Sviluppo di moduli Micro-Frontend con Module Federation e custom web components per integrazioni esterne</li>
+                     <li>- Supporto tecnico per i team di prodotto, operations e sales</li>
+                     <li>- Partecipazione a fiere internazionali (NRF New York, Vivatech Paris, Creator Fest London)</li>
+                  </ul>
                   <h4>Settembre 2018 - Dicembre 2020</h4>
                   <p>Head of front end presso Vivaticket S.p.a.</p>
                   <ul>
@@ -249,16 +250,6 @@
                   <p>Collaborazione presso la biblioteca dell'università IULM di Milano come assistente dell'ufficio acquisti
                      e catalogazione.</p>
                </section>
-               <section>
-                  <h3>Studi</h3>
-                  <h4>Marzo 2000</h4>
-                  <p>Laurea in Relazioni Pubbliche conseguita presso la Libera Università di Lingue e Comunicazione IULM di Milano con una tesi in Economia dell’informazione dal titolo "Il mercato discografico e le nuove tecnologie: pirateria e copia privata".</p>
-                  <p>Relatore prof. Carlo Antonio Ricciardi.<br>Voto di laurea: 110/110 e lode.</p>
-
-                  <h4>Giugno 1995</h4>
-                  <p>Maturità Scientifica conseguita presso il liceo statale "Giovanni Gandini" di Lodi.
-                     <br> Voto di diploma: 56/60.</p>
-               </section>
             </div>
          </div>
          <div class="footer">
@@ -274,7 +265,16 @@
                </h2>
             </aside>
             <div class="main">
+               <section>
+                  <h3>Studi</h3>
+                  <h4>Marzo 2000</h4>
+                  <p>Laurea in Relazioni Pubbliche conseguita presso l'università IULM di Milano con una tesi in Economia dell’informazione dal titolo "Il mercato discografico e le nuove tecnologie: pirateria e copia privata".</p>
+                  <p>Relatore prof. Carlo Antonio Ricciardi.<br>Voto di laurea: 110/110 e lode.</p>
 
+                  <h4>Giugno 1995</h4>
+                  <p>Maturità Scientifica conseguita presso il liceo statale "Giovanni Gandini" di Lodi.
+                     <br> Voto di diploma: 56/60.</p>
+               </section>
                <section>
                   <h3>Corsi e Specializzazioni</h3>
                   <h4>Marzo 2002</h4>
@@ -282,31 +282,21 @@
                </section>
                <section>
                   <h3>Lingue</h3>
-                  <p>Italiano (Madrelingua), Inglese (Eccellente), Tedesco (Base)</p>
+                  <p><strong>Italiano</strong> (Madrelingua), <strong></strong>Inglese</strong> (Ottimo), <strong>Tedesco</strong> (Base)</p>
                </section>
                <section>
                   <h3>Competenze informatiche</h3>
-                  <p>
-                     • Frontend & Architettura: React, NextJs, TypeScript, Webpack Module Federation, Nx Monorepo, Chakra UI, Shadcn/UI, Tailwind CSS.
-                     • 3D Development: Three.js, React Three Fiber, WebGL.
-                     • DevOps & Tooling: Azure Pipelines, GitFlow, CI/CD, Unit/Integration Testing (Jest, Cypress, Playwright).
-                     • Backend & Integrazioni: Node.js, REST APIs, OAuth 2.0, Stripe/PayPal SDKs, i18next.
-                     • Metodologie: SCRUM, Kanban, TDD, ottimizzazione delle prestazioni (SEO, Web Vitals).
-                  </p>
+                     <ul class="skills-list">
+                        <li><strong>- Linguaggi:</strong> TypeScript, JavaScript (ES6+)</li>
+                        <li><strong>- Frameworks:</strong> React, NextJs, React Router , React Query, i18next, Vuejs</li>
+                        <li><strong>- Design System:</strong> Chakra UI, Tailwind CSS, Shadcn/UI, Emotion, css-in-js</li>
+                        <li><strong>- Tool:</strong> Nx Monorepo, Webpack 5 (Module Federation), npm, yarn, vite</li>
+                        <li><strong>- 3D:</strong> Three.js, React Three Fiber, Drei, WebGL</li>
+                        <li><strong>- CI/CD:</strong> Azure DevOps Pipelines, Nx Cloud, GitFlow</li>
+                        <li><strong>- Testing &amp; Quality:</strong> Jest, Cypress, Playwright</li>
+                        <li><strong>- Metodologie agile:</strong>Scrum, Kanban</li>
+                     </ul>
                </section>
-               <!-- <section>
-                  <h3>Portfolio</h3>
-                  <p>Alcuni tra i lavori più rappresentativi:</p>
-                  <ul>
-                     <li>- <a href="https://www.ilfattoquotidiano.it" target="_blank">www.ilfattoquotidiano.it</a> (realizzazione completa dell’attuale versione del quotidiano online e di tutti i relativi
-                        prodotti editoriali e di marketing, su piattaforma Wordpress)</li>
-                     <li>- <a href="http://calendar2014.lavazza.com/" target="_blank">Calendario Lavazza 2014</a> (versione mobile & tablet)</li>
-                     <li>- App-etizer Olivia e Marino (app ibrida per Android e iOs)</li>
-                     <li>- <a href="http://www.kinder.com" target="_blank">www.kinder.com</a> (network internazionale su piattaforma enterprise Liferay)</li>
-                     <li>- <a href="http://f138.ferrari.com" target="_blank"></a>f138.ferrari.com (web, tablet, mobile)</li>
-                  </ul>
-                  <p>Ho inoltre collaborato a progetti per clienti nazionali e internazionali come Nutella, Banca Mediolanum, Bosch, Condé Nast, Lottomatica, Masterfoods, Reckitt Benckiser, ecc.</p>
-               </section> -->
                <section>
                   <h3>Riconoscimenti</h3>
                   <ul>
@@ -315,17 +305,13 @@
                   </ul>
                </section>
                <section>
-                  <h3>Obblighi Militari</h3>
-                  <p>Assolti con Servizio Civile svolto presso la Fondazione Don Carlo Gnocchi di Milano da Settembre 2000 a Luglio
-                     2001.</p>
-               </section>
-               <section>
                   <h3>Interessi e Attività extra lavorative</h3>
                   <ul>
-                     <li>- Musica: musicista amatoriale con diversi album pubblicati</li>
-                     <li>- Lavorazione del legno: liuteria, arredamento, oggettistica</li>
-                     <li>- Sport fluviali (campione italiano di canoa nel 1992) </li>
-                     <li>- Donatore di sangue AVIS dal 1994</li>
+                     <li>- <strong>Musica</strong>: musicista amatoriale con diversi album pubblicati</li>
+                     <li>- <strong>Lavorazione del legno</strong>: liuteria, arredamento, oggettistica</li>
+                     <li>- <strong>Sport fluviali</strong>: campione italiano di canoa nel 1992 </li>
+                     <li>- <strong>Donatore di sangue</strong> AVIS dal 1994</li>
+                     <li>- <strong></strong>Servizio Civile</strong> svolto presso la Fondazione Don Carlo Gnocchi di Milano da Settembre 2000 a Luglio 2001</li>
                   </ul>
                </section>
                <small class="privacy">

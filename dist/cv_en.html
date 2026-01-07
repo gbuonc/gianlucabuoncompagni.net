@@ -14,13 +14,6 @@
          margin: 10mm 15mm 0mm 0mm;
          height: 100%;
          position: relative;
-         @bottom-left {
-            margin: 10pt 0 30pt 0;
-            border-top: .25pt solid #666;
-            content: "My book";
-            font-size: 9pt;
-            color: #333;
-         }
       }
 
       * {
@@ -33,7 +26,7 @@
          padding: 0;
          height: 100%;
          font-family: 'Barlow Semi Condensed', sans-serif;
-         font-size: 18px;
+         font-size: 20px;
          color: darkslategray;
       }
 
@@ -136,9 +129,9 @@
       }
 
       @media print {
-         html, body {font-size: 15px;}
+         html, body {font-size: 16px;}
          .page {
-            page-break-after: always;
+            page-break-after: initial;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -205,12 +198,20 @@
             <div class="main">
                <section>
                   <h3>Profile</h3>
-                  <p>Front end developer and team leader with more than 15 years of experience in the development of high traffic websites and web apps, responsive and compliant with the latest standards (html5 and css3, javascript ES6), with extensive knowledge in cross browser development, optimization performance and online advertising, usability and accessibility principles, SEO and UX design practices. Knowledge of the main javascript frameworks and libraries, Rest API and client / server communication, versioning and build tool, agile development, unit and integration testing, worflow CI / CD.</p>
+                  <p>Engineering Manager responsible for front-end architecture, managing distributed development teams, and implementing sophisticated user interfaces. Specialized in the React ecosystem, TypeScript, and 3D web technologies, with a solid background in managing large-scale multi-tenant e-commerce SaaS platforms and micro-frontend architectures.</p>
                </section>
                <section>
                   <h3>Professional profile</h3>
                   <h4>Current position</h4>
-                  <p><strong>Head of front end at Successori Reda S.p.a.</strong></p>
+                  <p><strong>Head of front end and Customer Integration at Tailoor Srl</strong></p>
+                  <ul>
+                    <li> - Responsible for the front end development, 3D and integrations for a complex and scalable SaaS platform </li>
+                    <li> - Architecture of a front-end ecosystem for a multi-tenant e-commerce SaaS platform </li>
+                    <li> - Development of advanced browser-based and mobile 3D configurators </li>
+                    <li> - Development of micro-frontend modules with Module Federation and custom web components for external integrations </li>
+                    <li> - Technical support for product, operations and sales teams </li>
+                    <li> - Participation in international exhibitions (NRF New York, Vivatech Paris, Creator Fest London) </li>
+                  </ul>
                   <h4>September 2018 - December 2020</h4>
                   <p>Head of front end at Vivaticket S.p.a.</p>
                   <ul>
@@ -244,17 +245,7 @@
                   <p>Collaboration at the library of the IULM university of Milan as assistant to the purchasing office
                     and cataloging.</p>
                </section>
-               <section>
-                  <h3>Education</h3>
-                  <h4>March 2002</h4>
-                  <p>Six-month postgraduate course in Web Project Management at Genesio - Institute for New Technologies, Milan.</p>
-                  <h4>March 2000</h4>
-                  <p>Degree in Public Relations from IULM University in Milan with a thesis in Information Economics entitled "The record market and new technologies: piracy and private copying". </p>
-                  <p> Supervisor prof. Carlo Antonio Ricciardi. <br> Degree mark: 110/110 with honors.</p>
-
-                  <h4>June 1995</h4>
-                    <p>Scientific high school degree obtained at the "Giovanni Gandini" state high school in Lodi.<br> Graduation mark: 56/60. </p>
-               </section>
+               
             </div>
          </div>
          <div class="footer">
@@ -271,23 +262,32 @@
             </aside>
             <div class="main">
                <section>
+                  <h3>Education</h3>
+                  <h4>March 2002</h4>
+                  <p>Six-month postgraduate course in Web Project Management at Genesio - Institute for New Technologies, Milan.</p>
+                  <h4>March 2000</h4>
+                  <p>Degree in Public Relations from IULM University in Milan with a thesis in Information Economics entitled "The record market and new technologies: piracy and private copying". </p>
+                  <p> Supervisor prof. Carlo Antonio Ricciardi. <br> Degree mark: 110/110 with honors.</p>
+
+                  <h4>June 1995</h4>
+                    <p>Scientific high school degree obtained at the "Giovanni Gandini" state high school in Lodi.<br> Graduation mark: 56/60. </p>
+               </section>
+               <section>
                   <h3>Languages</h3>
-                  <h4>Italian</h4>
-                  <p>Native speaker</p>
-                  <h4>English</h4>
-                  <p> Excellent oral and written comprehension, and good command of written and spoken expression.</p>
-                  <h4>German</h4>
-                  <p>Basic understanding and expressive ability, both in written and spoken form.</p>
+                  <p><strong>Italian</strong> (Native), <strong>English</strong> (Excellent), <strong>German</strong> (Basic)</p>
                </section>
                <section>
                   <h3>Computer skills</h3>
-                  <p>
-                        Platforms: Mac, Pc<br>
-                        Operating Systems: Mac OsX, MS Windows<br>
-                        Development: Html, css, javascript(ES6), node.js, npm, git<br>
-                        Graphic design: Adobe Photoshop, Illustrator, InDesign, Acrobat<br>
-                        Database: MySql, Firebase,
-                  </p>
+                  <ul class="skills-list">
+                     <li><strong>- Languages:</strong> TypeScript, JavaScript (ES6+)</li>
+                     <li><strong>- Frameworks:</strong> React, NextJs, React Router , React Query, i18next, Vuejs</li>
+                     <li><strong>- Design Systems:</strong> Chakra UI, Tailwind CSS, Shadcn/UI, Emotion, css-in-js</li>
+                     <li><strong>- Tooling:</strong> Nx Monorepo, Webpack 5 (Module Federation), npm, yarn, vite</li>
+                     <li><strong>- 3D Technologies:</strong> Three.js, React Three Fiber, Drei, WebGL</li>
+                     <li><strong>- CI/CD:</strong> Azure DevOps Pipelines, Nx Cloud, GitFlow</li>
+                     <li><strong>- Testing &amp; Quality:</strong> Jest, Cypress, Playwright</li>
+                     <li><strong>- Agile methodologies:</strong>Scrum, Kanban</li>
+                  </ul>
                </section>
                <section>
                 <h3> Awards </h3>
@@ -297,16 +297,13 @@
                   </ul>
                </section>
                <section>
-                <h3> Military Obligations </h3>
-                <p> Acquired with Civil Service carried out at the Don Carlo Gnocchi Foundation in Milan from September 2000 to July
-                   2001. </p>
-               </section>
-               <section>
                 <h3> Interests and extra work activities </h3>
                 <Ul>
-                   <li> - Music (amateur musician - <a href="http://www.letlovin.com" target="_blank"> www.letlovin.com </a>) </li>
+                   <li> - Music: amateur musician with several albums published </li>
+                   <li> - Woodworking: musical instruments, furniture, object design </li>
                    <li> - River sports (Italian Canadian canoe champion in 1992) </li>
                    <li> - AVIS blood donor since 1994 </li>
+                   <li> - Civil Service carried out at the Don Carlo Gnocchi Foundation in Milan from September 2000 to July 2001</li>
                    </ul>
                </section>
                <small class="privacy">
