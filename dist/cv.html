@@ -1,33 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>Gian Luca Buoncompagni  - Curriculum Vitae</title>
+   <title>Gian Luca Buoncompagni - Curriculum Vitae</title>
    <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:300, 400,400i,500,700" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed:400,400i,500,700" rel="stylesheet">
    <style>
       @page {
          size: auto;
          margin: 10mm 15mm 0mm 0mm;
-         height: 100%;
-         position: relative;
       }
 
       * {
-         position: relative;
          box-sizing: border-box;
       }
+
       html,
       body {
          margin: 0;
          padding: 0;
-         height: 100%;
          font-family: 'Barlow Semi Condensed', sans-serif;
-         font-size: 20px;
+         font-size: 18px;
          color: darkslategray;
+         line-height: 1.45;
+         background: #f5f7fa;
       }
 
       h1,
@@ -35,129 +34,437 @@
       h3,
       h4 {
          font-family: 'Barlow Condensed', sans-serif;
+         letter-spacing: 0.03em;
          margin: 0;
-         letter-spacing:0.04em;
-      }
-      strong{font-weight: 500;}
-      a {
-         color: inherit;
-         text-decoration: none;
+         line-height: 1;
       }
 
       h1 {
-         font-weight: 500;
+         font-size: 2.05rem;
+         font-weight: 400;
+         margin-bottom: 0.28em;
+         color: #7d8e0a;
          text-transform: uppercase;
-         line-height: 1;
-         margin-bottom: .4em;
       }
 
       h2 {
+         font-size: 1.15rem;
          font-weight: 400;
-         font-size: 1.4em;
-         margin-bottom: .5em;
-         color: lightslategray;
+         margin-bottom: 1.25rem;
+         color: #5f6d79;
       }
 
       h3 {
-         text-transform: uppercase;
-         font-size: 1.4em;
-         margin-bottom: .25em;
+         font-size: 1.2rem;
          font-weight: 500;
+         margin-bottom: 1rem;
+         text-transform: uppercase;
+         letter-spacing: 0.045em;
+         color: #142635;
+      }
+
+      h4 {
+         font-size: 1rem;
+         font-weight: 500;
+         line-height: 1;
+         color: #7d8e0a;
       }
 
       p {
-         margin: 0 0 .6em;
+         margin: 0 0 0.66rem;
       }
-      section{margin-bottom: 1.3em;}
-      ul{list-style-type: none; margin: 0 0 1em; padding: 0;}
-      ul > li {
-         line-height: 1.15;
-         margin-bottom: .4em;
-      }
-      .page {
-         margin: 0;
+
+      ul {
+         margin: 0 0 0.8rem;
          padding: 0;
       }
 
-      .footer{
-         display: block;
+      .main ul {
+         list-style: none;
+         padding-left: 0;
+         margin: 0.2rem 0 0;
+      }
+
+      .main ul > li {
+         margin-bottom: 0.4rem;
+         line-height: 1.38;
+         /* padding-left: 0.8rem;
+         position: relative; */
+      }
+
+      /* .main ul > li::before {
+         content: "-";
          position: absolute;
-         width: 100%;
-         bottom: 0;
          left: 0;
-         text-align: right;
-         font-style: italic;
-         opacity: .5;
-         font-size: .7em;
+         top: 0;
+      } */
+
+      aside ul,
+      .recap {
+         list-style: none;
+         padding-left: 0;
+      }
+
+      strong {
+         font-weight: 600;
+      }
+
+      .main p > strong {
+         font-weight: 700;
+         letter-spacing: 0.01em;
+      }
+
+      a {
+         color: inherit;
+      }
+      .pages {
+            max-width: 980px;
+            margin: 3em auto;
+            container-type: inline-size;
+         }
+
+      .page {
+         width: 100%;
+         max-width: 100%;
+         height: auto;
+         min-height: calc((100vw - 2rem) * 297 / 210);
+         min-height: calc(100cqw * 297 / 210);
+         margin: 0 auto 1.6rem;
+         padding: 0;
+         overflow: visible;
+         display: flex;
+         flex-direction: column;
+      }
+
+      .summary {
+         background: whitesmoke;
+         padding: .6rem 0.6rem 0;
+         left: -.6rem;
+         position: relative;
+         border-radius: 5px;
+         width: calc(100% + 1.2rem);
+         border-left:none;
+      }
+      .summary > p > strong {
+         font-weight: 500;
       }
 
       .content {
          display: flex;
-         justify-content: space-between;
-         vertical-align: top;
+         flex-direction: row;
+         flex-wrap: wrap;
+         align-items: flex-start;
+         gap: 2rem;
+         background: #ffffff;
+         border: 1px solid #dce3ea;
+         border-radius: 10px;
+         box-shadow: 0 8px 20px rgba(18, 31, 43, 0.06);
+         padding: 3rem;
+         height: auto;
+         min-height: 100%;
+         flex: 1;
+         overflow: visible;
+         align-items: stretch;
       }
+      
 
       aside {
-         width: 26vw;
+         width: 12rem;
+         flex: 0 0 12rem;
          text-align: right;
-         font-weight: 300;
-         font-size: .9em;
+         font-size: 0.92rem;
+         line-height: 1.35;
+         color: #3d4a54;
+         margin-top:.6rem;
+         /* position and visibility handled in media queries */
+      }
+
+      aside:not(.first-page) {
+         visibility: visible;
       }
 
       .main {
-         width: 68vw;
-         font-size: .9em;
+         flex: 1;
+         min-width: 0;
+         padding-right: 0.15rem;
+         font-size: 0.94rem;
+         line-height: 1.4;
+         display: flex;
+         flex-direction: column;
+         overflow: visible;
+            height: 100%;
+            margin-left: 0;
       }
 
-      .recap {
-         list-style-type: none;
-      }
-      .recap li{margin-bottom: .6em;}
-      .recap strong {
+      .content .privacy {
          display: block;
+         flex: 0 0 100%;
+         width: 100%;
+         margin-left: 0;
+         margin-top: auto;
+         padding-top: 0.9rem;
+         font-size: 0.8rem;
+         line-height: 1.35;
+         color: #4b5c69;
+         text-align: center;
       }
 
+      section {
+         margin-bottom: 2rem;
+         border-left: 3px solid #7d8e0a;
+         padding-left: 1rem;
+      }
+
+      .recap li {
+         margin-bottom: 0.46rem;
+      }
+
+      .recap-mobile {
+         display: none;
+      }
+
+      .core-skills {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         column-gap: 1.2rem;
+         row-gap: 0.7rem;
+         align-items: start;
+      }
+
+      .core-skills h3 {
+         margin-bottom: .5rem;
+         grid-column: 1 / -1;
+      }
+
+      .core-skills .skill-item {
+         align-self: start;
+      }
+      .experience-item {
+         margin-top: 1.3rem;
+      }
       .pic {
-         width: 6em;
-         height: 6em;
-         background: #efefef;
+         width: 5.8rem;
+         height: 5.8rem;
          border-radius: 50%;
-         margin: 0 -1em 2em auto;
-         overflow: hidden;
-         background: url('data:image/png;base64,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');
-         background-size: cover;
+         margin: 0 0 1rem auto;
+         background: url('./images/portrait.jpg') center center / cover no-repeat;
+         border: 1px solid #d7dee6;
+      }
+
+      .footer {
+         display: none;
+      }
+
+      @media screen and (max-width: 58em) {
+
+         .core-skills {
+            display: block;
+         }
+
+         h1 {
+            font-size: 1.5rem;
+            line-height: 1.05;
+         }
+         
+         .pages {
+            margin: auto;
+            padding: 1rem 0.7rem 1.2rem;
+         }
+
+         .page {
+            width: auto;
+            height: auto;
+            min-height: 0;
+            margin: 0;
+         }
+
+         .content {
+            display: flex;
+            flex-direction: column;
+            background: #ffffff;
+            border: 0;
+            box-shadow: none;
+            padding: 1rem;
+            gap:1rem;
+            border-radius: 0;
+            height: auto;
+            min-height: 0;
+         }
+
+         aside,
+         aside.first-page {
+            position: static;
+            width: auto;
+            flex: unset;
+            height: auto;
+            visibility: visible;
+            text-align: left;
+            padding-right: 0;
+            margin-top:0;
+         }
+
+         aside.first-page {
+            display: grid;
+            grid-template-columns: 5rem 1fr;
+            column-gap: 0.85rem;
+            row-gap: 0.15rem;
+            align-items: start;
+         }
+
+         aside.first-page .pic {
+            grid-column: 1;
+            grid-row: 1 / 3;
+            margin: 0;
+            width: 5rem;
+            height: 5rem;
+         }
+
+         aside.first-page h1,
+         aside.first-page h2 {
+            grid-column: 2;
+         }
+
+         aside.first-page .recap {
+            grid-column: 1 / -1;
+            margin-top: 0.5rem;
+            display: block;
+         }
+
+         aside.first-page .recap li {
+            margin-bottom: 0.46rem;
+         }
+
+         .main { order: 4; }
+         .content .privacy { order: 6; }
+
+         aside:not(.first-page) {
+            display: none;
+         }
+
+         aside.first-page .recap {
+            display: none;
+         }
+
+         .recap-mobile {
+            display: block;
+            order: 5;
+            margin: 0.4rem 0 0;
+         }
+         section{
+            border-left: none;
+            padding-left: 0;
+         }
+         
       }
 
       @media print {
-         html, body {font-size: 16px;}
-         .page {
-            page-break-after:initial;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 28.2cm;
+         html,
+         body {
+            background: #fff;
+            font-size: 14px;
+            line-height: 1.2;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
          }
-         .footer{display: block;}
-      }
-      @media screen {
-         a{text-decoration: underline;}
-         .pages{margin: 0 auto; padding:2em 1em; max-width: 1020px;}
-         .page{position: relative;}
-         .main{margin-left: 250px;}
-         aside{display: none; position: fixed; top:2.35em; bottom:0; width: auto; }
-         aside.first-page{display: block; z-index: 2; overflow: auto; padding-right: 1.5em;}
-         .footer{display: none;}
-      }
-      @media screen and (max-width:45em){
-         .pages{padding:2em .5em; }
-         .content{display: block;}
-         aside.first-page{position: relative; text-align: left; }
-         .main{margin-left: 0px; width: auto;}
-         .recap{display: flex; flex-wrap:wrap;}
-         .recap li{min-width: 7em;}
-         .pic{position: absolute; top:-1em; right:1em; width: 5em; height:5em;}
+
+         .pages {
+            max-width: none;
+            margin: 0;
+            padding: 0;
+         }
+
+         .page {
+            margin: 0;
+            page-break-after: auto;
+            break-after: auto;
+         }
+
+         .page:not(:last-child) {
+            page-break-after: always;
+            break-after: page;
+         }
+
+         .content {
+            border: 0;
+            box-shadow: none;
+            border-radius: 0;
+            padding: 0;
+            gap: 2.6rem;
+         }
+
+         aside,
+         aside.first-page,
+         aside:not(.first-page) {
+            visibility: visible;
+            position: static;
+            flex-basis: 5.8cm;
+            width: 5.8cm;
+            text-align: right;
+            margin-top:.6rem;
+            padding: 0;
+         }
+         aside:not(.first-page){
+            margin-top: 0;
+         }
+         p {
+            margin: 0 0 0.22rem;
+            line-height: 1.2;
+         }
+
+      ul {
+         margin: 0 0 0.6rem;
+         padding: 0;
       }
 
+      .main ul {
+         margin: 0.1rem 0 0;
+      }
+
+      .main ul > li {
+         margin-bottom: 0.2rem;
+         line-height: 1.1;
+      }
+
+
+         .core-skills h3 {
+            margin-bottom: 0.3rem;
+         }
+
+         .core-skills .skill-item {
+            break-inside: avoid;
+            page-break-inside: avoid;
+            margin-bottom: 0;
+            align-self: start;
+         }
+
+         .core-skills .skill-item h4 {
+            break-after: avoid;
+            page-break-after: avoid;
+         }
+
+         .core-skills .skill-item p {
+            break-before: avoid;
+            page-break-before: avoid;
+            break-inside: avoid;
+            page-break-inside: avoid;
+            margin-bottom: 0;
+         }
+
+         
+         .footer {
+            display: block;
+            text-align: right;
+            font-style: italic;
+            font-size: 0.7em;
+            opacity: 0.62;
+            margin-top: 0.2cm;
+         }
+         .content .privacy {
+
+         text-align: right;
+      }
+      }
+ 
    </style>
 </head>
 
@@ -172,84 +479,110 @@
                <div class="pic"></div>
                <ul class="recap">
                   <li>
-                     <strong>Data di nascita</strong>27/06/1976</li>
+                     Milano, Italia</li>
                   <li>
-                     <strong>Luogo di nascita</strong>Lodi (LO)</li>
+                     +39 339 7794186</li>
                   <li>
-                     <strong>Cittadinanza</strong>Italiana</li>
+                     gbuonc@gmail.com</li>
                   <li>
-                     <strong>Residenza</strong>Via Sansovino, 14<br>20133 - Milano</li>
-                  <li>
-                     <strong>Telefono</strong>+39 339 7794186</li>
-                  <li>
-                     <strong>E-mail</strong>gbuonc@gmail.com</li>
-                  <li>
-                     <strong>Web</strong>
-                     <small>
+                    
                         <a href="http://www.gianlucabuoncompagni.net" target="_blank">www.gianlucabuoncompagni.net</a>
                         <br>
                         <a href="http://linkedin.com/in/gbuoncompagni" target="_blank">linkedin.com/in/gbuoncompagni</a>
                         <br>
                         <a href="http://github.com/gbuonc" target="_blank">github.com/gbuonc</a>
-                     </small>
+                     
                   </li>
                </ul>
             </aside>
             <div class="main">
-               <section>
-                  <h3>Profilo</h3>
-                  <p>Engineering manager responsabile dell'architettura front end, della gestione di team di sviluppo distribuiti e dell'implementazione di interfacce utente sofisticate. Specializzato nell'ecosistema React, TypeScript e tecnologie web 3D, con un solido background nella gestione di piattaforme SaaS e-commerce multi-tenant di larga scala e architetture a microfrontend.
-                  </p>
+               <section class="summary">
+                  <p><strong>Engineering Manager e sviluppatore front-end con oltre 20 anni di esperienza nella realizzazione e nello sviluppo client side di piattaforme SaaS. Solida capacità di connettere esigenze di business ed esecuzione tecnica, collaborando con stakeholder interni ed esterni per realizzare applicazioni complesse e modulari.</strong></p>
+
+                  <p><strong>Esperto in architettura frontend, micro-frontends e interfacce ad alte prestazioni, con competenze nel contribuire all'evoluzione delle funzionalità e alla definizione delle roadmap di prodotto in ambienti multi-tenant.</strong></p>
                </section>
-               <section>
+               <section class="core-skills">
+                  <h3>Competenze Chiave</h3>
+                  <div class="skill-item">
+                     <h4>Architettura Frontend & Ingegneria</h4>
+                     <p>Micro-frontends con module federation, architetture SaaS multi-tenant scalabili, design systems</p>
+                  </div>
+                  <div class="skill-item">
+                     <h4>Prodotto & Strategia</h4>
+                     <p>Ownership delle funzionalita, collaborazione con gli stakeholder alla definizione dei requisiti ed evoluzione di prodotto</p>
+                  </div>
+                  <div class="skill-item">
+                     <h4>Stack Tecnologico</h4>
+                     <p>TypeScript, JavaScript, NextJs, ecosistema React e Vuejs</p>
+                  </div>
+                  <div class="skill-item">
+                     <h4>Design Systems</h4>
+                     <p>Shadcn/UI, Tailwind CSS, Chakra UI, Material UI, Emotion, css-in-js</p>
+                  </div>
+                  <div class="skill-item">
+                     <h4>Tecnologie 3D</h4>
+                     <p>Threejs, React Three Fiber, WebGL, Drei, WebGL</p>
+                  </div>
+                  <div class="skill-item">
+                     <h4>Tooling &amp; DevOps</h4>
+                     <p>Nx, Webpack 5, Vite, Azure DevOps, Cloudflare</p>
+                  </div>
+                  <div class="skill-item">
+                     <h4>Testing &amp; Quality</h4>
+                     <p>Jest, Cypress, Playwright, Sentry</p>
+                  </div>
+                  <div class="skill-item">
+                     <h4>AI</h4>
+                     <p>Integrazione di sistemi di AI generativa e workflow agentici</p>
+                  </div>
+                  <div class="skill-item">
+                     <h4>Metodologie Agile</h4>
+                     <p>Scrum, Kanban</p>
+                  </div>
+               </section>
+               <section class="professional-experience">
                   <h3>Esperienze Professionali</h3>
-                  <h4>Attuale occupazione</h4>
-                  <p><strong>Head of front end e Customer Integration presso Tailoor Srl</strong></p>
-                  <ul>
-                     <li>- Responsabile Front End, 3D e integrazioni per una piattaforma SaaS complessa e scalabile</li>
-                     <li>- Architettura di un ecosistema front-end per e-commerce SaaS multi-tenant</li>
-                     <li>- Realizzazione di configuratori 3D avanzati browser-based e mobile</li>
-                     <li>- Sviluppo di moduli Micro-Frontend con Module Federation e custom web components per integrazioni esterne</li>
-                     <li>- Supporto tecnico per i team di prodotto, operations e sales</li>
-                     <li>- Partecipazione a fiere internazionali (NRF New York, Vivatech Paris, Creator Fest London)</li>
-                  </ul>
-                  <h4>Settembre 2018 - Dicembre 2020</h4>
-                  <p>Head of front end presso Vivaticket S.p.a.</p>
-                  <ul>
-                     <li>- Responsabile dello sviluppo del portale B2C internazionale vivaticket.com</li>
-                     <li>- Coordinamento di team di sviluppo internazionali e integrazione con sistemi di ticketing esistenti</li>
-                     <li>- Sviluppo del tool web based per la gestione editoriale e la pianificazione commerciale dei contenuti del portale.</li>
-                  </ul>
-                  <h4>Maggio 2014 - Agosto 2018</h4>
-                  <p>Senior front end developer presso Editoriale Il Fatto Spa:</p>
-                  <ul>
-                     <li>- Sviluppo e ottimizzazione del sito web (1.6 milioni di visualizzazioni giornaliere) e di progetti editoriali speciali</li>
-                     <li>- Integrazione di network pubblicitari (Google DFP) e sistemi di delivery</li>
-                  </ul>
-
-                  <h4>Gennaio 2009 - Maggio 2014</h4>
-                  <p>Senior front end developer presso Zodiak Active Srl di Milano.</p>
-                  <ul>
-                     <li>- Sviluppo front endi di progetti per brand internazionali come Ferrero, Lavazza, Ferrari</li>
-                  </ul>
-
-                  <h4>Gennaio 2004 - Dicembre 2008</h4>
-                  <p>Collaborazione presso Fullsix SpA di Milano come Multimedia Specialist e Sviluppatore front end.<br>
-                  Attività di libero professionista.</p>
-
-                  <h4>Settembre 2001 - Gennaio 2004</h4>
-                  <p>Web designer presso Alchera Interactive SpA di Milano.</p>
-
-                  <h4>Luglio - Agosto 2001</h4>
-                  <p>Collaborazione con il Comune di Lodi come sviluppatore web e realizzazione siti internet come freelance.</p>
-
-                  <h4>Aprile - Agosto 2000</h4>
-                  <p>Stage di formazione presso Obweb srl di Milano in qualità di web designer e junior account.</p>
-
-                  <h4>Gennaio 1998 - Dicembre 1999</h4>
-                  <p>Collaborazione presso la biblioteca dell'università IULM di Milano come assistente dell'ufficio acquisti
-                     e catalogazione.</p>
+                  <div class="experience-item">
+                     <h4>Dicembre 2020 - Presente</h4>
+                     <p><strong>Head of Front End e Platform Integration presso Tailoor Spa</strong></p>
+                     <ul>
+                        <li>Ideazione e implementazione dell'architettura frontend e guida dei team di sviluppo per una piattaforma SaaS e-commerce multi-tenant</li>
+                        <li>Trasformazione dei requisiti di business in soluzioni tecniche scalabili</li>
+                        <li>Stretta collaborazione con team di prodotto, sales e operations per definire funzionalita e supportare la roadmap</li>
+                        <li>Progettazione di un sistema di micro-frontend a supporto di funzionalità per clienti custom</li>
+                        <li>Guida del team di sviluppo per la realizzazione di configuratori 3D avanzati</li>
+                        <li>Definizione della strategia di integrazione con piattaforme esterne tramite API e web components</li>
+                        <li>Contributo allo sviluppo di funzionalita basate su AI generativa e workflow agentici</li>
+                        <li>Partecipazione a fiere tecnologiche e commerciali internazionali</li>
+                     </ul>
+                  </div>
+                  <div class="experience-item">
+                     <h4>Settembre 2018 - Dicembre 2020</h4>
+                     <p><strong>Head of Front End presso Vivaticket Spa</strong></p>
+                     <ul>
+                        <li>Guida dei team di sviluppo frontend per una piattaforma B2C internazionale</li>
+                        <li>Stretta collaborazione con gli stakeholder di prodotto su funzionalità e strumenti editoriali</li>
+                        <li>Coordinamento di team internazionali e integrazioni con prodotti legacy</li>
+                     </ul>
+                  </div>
+                  <div class="experience-item">
+                     <h4>Maggio 2014 - Agosto 2018</h4>
+                     <p><strong>Senior Front End Developer presso Editoriale Il Fatto Spa</strong></p>
+                     <ul>
+                        <li>Sviluppo e ottimizzazione della piattaforma di informazione ilfattoquotidiano.it (con una media di 1,6M visualizzazioni giornaliere)</li>
+                        <li>Definizione e sviluppo di funzionalita di prodotto, integrazioni ADV, monetizzazione e progetti speciali</li>
+                     </ul>
+                  </div>
+                  <div class="experience-item">
+                     <h4>Esperienze Precedenti (2000 - 2014)</h4>
+                     <p></p>
+                     <ul>
+                        <li>Senior Frontend Developer presso Zodiak Active Srl, con attività su progetti internazionali per brand come Ferrero, Lavazza, Ferrari</li>
+                        <li>Frontend Developer e Multimedia Specialist in agenzie di web marketing (Fullsix SpA e altre realta)</li>
+                     </ul>
+                  </div>
                </section>
+               
             </div>
          </div>
          <div class="footer">
@@ -265,60 +598,59 @@
                </h2>
             </aside>
             <div class="main">
-               <section>
-                  <h3>Studi</h3>
-                  <h4>Marzo 2000</h4>
-                  <p>Laurea in Relazioni Pubbliche conseguita presso l'università IULM di Milano con una tesi in Economia dell’informazione dal titolo "Il mercato discografico e le nuove tecnologie: pirateria e copia privata".</p>
-                  <p>Relatore prof. Carlo Antonio Ricciardi.<br>Voto di laurea: 110/110 e lode.</p>
-
-                  <h4>Giugno 1995</h4>
-                  <p>Maturità Scientifica conseguita presso il liceo statale "Giovanni Gandini" di Lodi.
-                     <br> Voto di diploma: 56/60.</p>
+               <section class="selected-highlights">
+                  <h3>IN SINTESI</h3>
+                  <ul>
+                     <li>Sviluppo di architetture per piattaforme SaaS multi-tenant</li>
+                     <li>Realizzazione di configuratori 3D per web e mobile</li>
+                     <li>Integrazioni con sistemi di terze parti tramite applicazioni client side modulari</li>
+                     <li>Conoscenza e sviluppo di sistemi di AI genrativa e workflow agentici</li>
+                     <li>Competenze di business e di prodotto</li>
+                  </ul>
                </section>
-               <section>
-                  <h3>Corsi e Specializzazioni</h3>
-                  <h4>Marzo 2002</h4>
-                  <p>Corso post laurea in Web Project Management presso Genesio - Istituto Nuove Tecnologie, Milano.</p>
+               <section class="education">
+                  <h3>Formazione</h3>
+                  <ul>
+                     <li>Laurea in Scienze della Comunicazione e Relazioni Pubbliche (con voto 110/110 e lode) - Universita IULM, Milano</li>
+                     <li>Corso post-laurea in Web Project Management - Istituto Genesio, Milano</li>
+                     <li>Certificazione del master online "Future of Technology: Trends, Strategies, and Innovation Opportunities" -University of California Berkeley Executive Education</li>
+                  </ul>
                </section>
-               <section>
+               <section class="languages">
                   <h3>Lingue</h3>
-                  <p><strong>Italiano</strong> (Madrelingua), <strong></strong>Inglese</strong> (Ottimo), <strong>Tedesco</strong> (Base)</p>
+                  <p><strong>Italiano</strong> (Madrelingua), <strong>Inglese</strong> (Professionale), <strong>Tedesco</strong> (Base)</p>
                </section>
-               <section>
-                  <h3>Competenze informatiche</h3>
-                     <ul class="skills-list">
-                        <li><strong>- Linguaggi:</strong> TypeScript, JavaScript (ES6+)</li>
-                        <li><strong>- Frameworks:</strong> React, NextJs, React Router , React Query, i18next, Vuejs</li>
-                        <li><strong>- Design System:</strong> Chakra UI, Tailwind CSS, Shadcn/UI, Emotion, css-in-js</li>
-                        <li><strong>- Tool:</strong> Nx Monorepo, Webpack 5 (Module Federation), npm, yarn, vite</li>
-                        <li><strong>- 3D:</strong> Three.js, React Three Fiber, Drei, WebGL</li>
-                        <li><strong>- CI/CD:</strong> Azure DevOps Pipelines, Nx Cloud, GitFlow</li>
-                        <li><strong>- Testing &amp; Quality:</strong> Jest, Cypress, Playwright</li>
-                        <li><strong>- Metodologie agile:</strong>Scrum, Kanban</li>
-                     </ul>
-               </section>
-               <section>
-                  <h3>Riconoscimenti</h3>
+               
+               <section class="awards">
+                <h3> Premi </h3>
                   <ul>
-                     <li>- Premio Web Rockit 2002 per www.jntplus.com (ora offline)</li>
-                     <li>- Premio Mediastars 2005 (cat. e-commerce) per <a href="http://www.unopiu.it" target="_blank">www.unopiu.it</a></li>
+                     <li> Premio Web Rockit 2002 per www.jntplus.com (ora offline) </li>
+                     <li> Premio Mediastars 2005 (cat. e-commerce) per www.unopiu.it </li>
                   </ul>
                </section>
-               <section>
-                  <h3>Interessi e Attività extra lavorative</h3>
-                  <ul>
-                     <li>- <strong>Musica</strong>: musicista amatoriale con diversi album pubblicati</li>
-                     <li>- <strong>Lavorazione del legno</strong>: liuteria, arredamento, oggettistica</li>
-                     <li>- <strong>Sport fluviali</strong>: campione italiano di canoa nel 1992 </li>
-                     <li>- <strong>Donatore di sangue</strong> AVIS dal 1994</li>
-                     <li>- <strong></strong>Servizio Civile</strong> svolto presso la Fondazione Don Carlo Gnocchi di Milano da Settembre 2000 a Luglio 2001</li>
-                  </ul>
+               <section class="interests">
+                <h3> Interessi e attivita extra-lavorative </h3>
+                <Ul>
+                   <li> Musica: musicista amatoriale e bassista con diversi album all'attivo </li>
+                   <li> Lavorazione del legno: strumenti musicali, mobili fai-da-te, design di oggetti </li>
+                   <li> Sport fluviali (campione italiano di canoa discesa nel 1992) </li>
+                   <li> Donatore di sangue AVIS dal 1994 </li>
+                   </ul>
                </section>
-               <small class="privacy">
-                  Il sottoscritto dichiara di essere a conoscenza dei diritti riconosciuti dal Dlgs n.196/2003 e consente il trattamento dei
-                  dati personali per le sole attività di ricerca e selezione del personale.
-               </small>
             </div>
+            <ul class="recap recap-mobile">
+               <li>Milano, Italia</li>
+               <li>+39 339 7794186</li>
+               <li>gbuonc@gmail.com</li>
+               <li>
+                  <a href="http://www.gianlucabuoncompagni.net" target="_blank">www.gianlucabuoncompagni.net</a><br>
+                  <a href="http://linkedin.com/in/gbuoncompagni" target="_blank">linkedin.com/in/gbuoncompagni</a><br>
+                  <a href="http://github.com/gbuonc" target="_blank">github.com/gbuonc</a>
+               </li>
+            </ul>
+            <small class="privacy">
+             Autorizzo il trattamento dei miei dati personali esclusivamente per finalita di ricerca e selezione del personale.
+            </small>
          </div>
          <div class="footer">
             <p>Gian Luca Buoncompagni - Curriculum Vitae - Pagina 2/2</p>
